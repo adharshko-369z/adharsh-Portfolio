@@ -1,0 +1,48 @@
+:root{
+    /* Backgrounds and surfaces */
+    --bg: #0B0F1A;
+    --surface: #121829;
+    --surface-raised: #1A2238;
+    --border: #263049;
+    --border-strong: #364263;
+
+    /* Text */
+    --text: #E8ECF5;
+    --text-secondary: #A9B3C9;
+    --text-muted: #7A859E;
+
+    /* Accent */
+    --accent: #5B8CFF;
+    --accent-hover: #7AA2FF;
+    --accent-pressed: #3F6FE6;
+    --accent-subtle: #14203F;
+    --on-accent: #0B0F1A;
+
+    /* status-color */
+    --success: #3DD68C;
+    --warning: #F5B84B;
+    --error: #FF6B7A;
+
+    /* Fonts */
+    --font-heading: "Sora", system-ui, sans-serif;
+    --font-body: "DM Sans", system-ui, sans-serif;
+
+    /* Weights */
+    --weight-regular: 400;
+    --weight-semibold: 600;
+    --weight-bold: 700;
+
+    /* text-size */
+    --text-sm: .875rem;
+    --text-base: 1rem;
+    --text-md: 1.125rem;
+    --text-lg: 1.5rem;
+    --text-xl: 1.625rem;
+    --text-2xl: 2rem;
+    --text-3xl: 2.25rem;
+
+    /* border-radius */
+    --radius-sm: 4px;
+    --radius-md: 6px;
+    --radius-full: 50px;
+}
