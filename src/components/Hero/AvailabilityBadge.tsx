@@ -1,5 +1,6 @@
-import { profile } from "../../data/profile"
 import { useState } from "react"
+import { profile } from "../../data/profile"
+import { mailtoFor } from "./mailto"
 
 export default function AvailabilityBadge(){
 
@@ -11,7 +12,9 @@ export default function AvailabilityBadge(){
 
     const roleList = profile.roles.map( role => {
         return(
-            <li key={role}>{role}</li>
+            <li key={role}>
+                <a href={mailtoFor(role)} target="_blank" rel="noopener noreferrer">{role}</a>
+            </li>
         )
     } )
 

@@ -67,12 +67,20 @@
 .status-card > ul{
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
-.status-card> ul > li{
-    list-style: none;
-    font-size: var(--text-sm);
-    color: var(--text-secondary);
+.status-card > ul > li > a {
+  display: block;
+  padding: 0.25rem 0;
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.status-card > ul> li > a:hover {
+  color: var(--text);
 }
 
 @media (min-width: 1024px) {
@@ -85,7 +93,7 @@
     }
 
     .status-card > p,
-    .status-card > ul > li{
+    .status-card > ul > li> a{
         font-size: var(--text-base);
     }
 }
@@ -97,7 +105,10 @@
 
   .status-card { 
     animation: none; 
-    transition: none; 
+  }
+
+  .status-card ul > li > a {
+    transition: none;
   }
 
   .status-btn{ 

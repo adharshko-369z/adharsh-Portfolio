@@ -26,11 +26,11 @@
     font-weight: var(--weight-regular);
     color: var(--text-secondary);
     text-decoration: none;
+    transition: color 0.2s;
 }
 
 .nav > a:hover{
     color: var(--text);
-    transition: 0.2s;
 }
 
 .nav> a:active{
@@ -46,13 +46,14 @@
     border-radius: var(--radius-md);
     padding: .25rem .5rem;
     cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .nav > .btnLink:hover,
 .nav > .btnLink:active{
     background-color: var(--surface);
     color: var(--text);
-    transition: 0.2s;
+    
 }
 
 @media (min-width: 530px){
@@ -97,3 +98,14 @@
     }
 }
 
+@media (prefers-reduced-motion: reduce) { 
+
+    .nav > a{
+        transition: none;
+    }
+
+    .nav > .btnLink{
+        transition: none;
+    }
+
+ }
