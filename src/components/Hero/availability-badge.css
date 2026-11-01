@@ -1,0 +1,111 @@
+.availability{
+    position: relative;
+    width: fit-content;
+}
+
+.status-btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    font-size: var(--text-sm);
+    font-family: var(--font-body);
+    font-weight: var(--weight-regular);
+    background-color: var(--bg);
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-full);
+    transition: background-color 0.2s, color 0.2s;
+    padding: .25rem 1rem;
+    cursor: pointer;
+}
+
+.status-btn:hover{
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+.status-dot{
+    width: .5rem;
+    height: .5rem;
+    background: var(--success);
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.status-arrow{
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.status-arrow.open{
+    transform: rotate(-180deg);
+}
+
+.status-card{
+    width: max-content;
+    max-width: calc(100vw - 2rem);
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-top: .5rem;
+    padding:  .5rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 5;
+    line-height: 1.6;
+    animation: card-in 0.2s ease;
+}
+
+.status-card > p{
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.status-card > ul{
+    margin: 0;
+    padding: 0;
+}
+
+.status-card> ul > li{
+    list-style: none;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+@media (min-width: 1024px) {
+    .status-btn{
+        font-size: var(--text-base);
+    }
+
+    .status-card{
+        padding: 1rem;
+    }
+
+    .status-card > p,
+    .status-card > ul > li{
+        font-size: var(--text-base);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {  
+  .status-arrow {
+    transition: none;
+  }
+
+  .status-card { 
+    animation: none; 
+    transition: none; 
+  }
+
+  .status-btn{ 
+    transition: none;
+  } 
+}
+
+@keyframes card-in {
+  from { opacity: 0; transform: translateY(-0.25rem); }
+  to   { opacity: 1; transform: translateY(0); }
+}

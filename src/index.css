@@ -1,4 +1,6 @@
 @import url("./styles/token.css");
 @import url("./styles/global.css");
-@import url("./styles/header.css");
+@import url("./components/Header/header.css");
+@import url("./components/Hero/availability-badge.css");
+@import url("./components/Hero/hero.css");
 

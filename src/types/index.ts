@@ -1,5 +1,7 @@
 
 export interface Profile {
     name: string,
-    resumeUrl: string
+    resumeUrl: string,
+    status: string
+    roles: string[]
 }
