@@ -1,10 +1,33 @@
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { profile } from "../../data/profile"
 import { mailtoFor } from "./mailto"
 
 export default function AvailabilityBadge(){
 
     const [isOpen, setIsOpen] = useState(false)
+    const wrapperRef = useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+        if (!isOpen) return
+
+        function handleKeyDown(e: KeyboardEvent) {
+            if (e.key === "Escape") setIsOpen(false)
+        }
+
+        function handlePointerDown(e: PointerEvent) {
+            if (wrapperRef.current && !wrapperRef.current.contains(e.target as Node)) {
+            setIsOpen(false)
+            }
+        }
+
+        document.addEventListener("keydown", handleKeyDown)
+        document.addEventListener("pointerdown", handlePointerDown)
+
+        return () => {
+            document.removeEventListener("keydown", handleKeyDown)
+            document.removeEventListener("pointerdown", handlePointerDown)
+        };
+    }, [isOpen])
 
     function handleToggle(){
         setIsOpen(prev => !prev)
@@ -19,7 +42,7 @@ export default function AvailabilityBadge(){
     } )
 
     return(
-        <div className="availability">
+        <div className="availability" ref={wrapperRef}>
             <button 
                 type="button"
                 className="status-btn" 
