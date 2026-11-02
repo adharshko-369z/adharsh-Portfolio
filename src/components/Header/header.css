@@ -1,9 +1,12 @@
 .header{
+    border-bottom: 1px solid var(--border);
+    padding: 1rem 0;
+}
+
+.header-row{
     display: flex;
     flex-direction: column;
-    padding: 1rem;
-    gap: .5rem;
-    border-bottom: 1px solid var(--border);
+    gap: 0.5rem;
 }
 
 .logo > span{
@@ -57,7 +60,7 @@
 }
 
 @media (min-width: 530px){
-    .header{
+    .header-row{
         flex-direction: row;
         align-items: center;
     }
@@ -73,16 +76,10 @@
     }
 }
 
-@media (min-width: 768px){
-
-    .header{
-        padding:1rem 1.5rem;
-    }
-}
 
 @media (min-width: 1024px) {
     .header{
-        padding:1.5rem;
+        padding:1.5rem 0;
     }
 
     .logo > span{

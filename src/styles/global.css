@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     margin: 0;
     background-color: var(--bg);
@@ -5,8 +9,56 @@ body{
     font-family: var(--font-body);
 }
 
+h1,h2,p{
+    margin: 0;
+}
+
 button:focus-visible,
 a:focus-visible{
     outline: 2px solid var(--accent);
     outline-offset: 2px;
+}
+
+.btn{
+    font-size: var(--text-sm);
+    font-weight: var(--weight-semibold);
+    padding: 0.6rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: var(--text);
+}
+
+.container{
+    padding: 0 1rem;
+}
+
+@media (min-width: 530px) {
+    .container{
+        padding: 0 1.5rem;
+    }
+}
+
+@media (min-width: 640px){
+    .container{
+        padding: 0 2rem;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        padding: 0 2.5rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+
+    .container{
+        padding: 0 3rem;
+    }
+
+    .btn{
+        font-size: var(--text-base);
+    }
 }

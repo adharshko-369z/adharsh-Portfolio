@@ -5,6 +5,8 @@ export interface Profile {
     name: string,
     email: string,
     resumeUrl: string,
-    status: Status
-    roles: string[]
+    status: Status,
+    roles: string[],
+    headline: string,
+    intro: string
 }

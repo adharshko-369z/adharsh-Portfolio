@@ -1,6 +1,7 @@
 .availability{
     position: relative;
     width: fit-content;
+    padding-bottom: 1rem ;
 }
 
 .status-btn{
