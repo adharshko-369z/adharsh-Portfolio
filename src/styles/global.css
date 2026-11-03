@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;   
+}
+
 body{
     margin: 0;
     background-color: var(--bg);
@@ -9,8 +14,15 @@ body{
     font-family: var(--font-body);
 }
 
-h1,h2,p{
+h1,h2,h3,p{
     margin: 0;
+}
+
+.section-heading{
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    font-family: var(--font-body);
+    text-transform: uppercase;
 }
 
 button:focus-visible,
@@ -31,11 +43,17 @@ a:focus-visible{
 
 .container{
     padding: 0 1rem;
-    max-width: 70rem;  
+    width: 100%;
+    max-width: 72rem;  
     margin-inline: auto;
 }
 
 @media (min-width: 530px) {
+
+    html{ 
+        scroll-padding-top: 4.5rem; 
+    }
+
     .container{
         padding: 0 1.5rem;
     }
@@ -56,6 +74,10 @@ a:focus-visible{
 
 @media (min-width: 1024px) {
 
+    .section-heading{
+        font-size: var(--text-md);
+    }
+
     .container{
         padding: 0 3rem;
     }
@@ -63,4 +85,10 @@ a:focus-visible{
     .btn{
         font-size: var(--text-base);
     }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }

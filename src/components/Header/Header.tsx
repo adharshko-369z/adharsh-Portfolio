@@ -11,7 +11,7 @@ export default function Header(): JSX.Element{
                     <span>{`< ${profile.name} >`}</span>
                 </div>
                 <nav className="nav">
-                    <a href="#">About</a>
+                    <a href="#about">About</a>
                     <a href="#">Projects</a>
                     <a href="#">Skills</a>
                     <a href="#">Contact</a>
