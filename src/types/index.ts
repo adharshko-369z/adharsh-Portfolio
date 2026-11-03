@@ -8,5 +8,6 @@ export interface Profile {
     status: Status,
     roles: string[],
     headline: string,
-    intro: string
+    intro: string,
+    aboutMe: string[]
 }
