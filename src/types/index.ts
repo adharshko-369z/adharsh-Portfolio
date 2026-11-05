@@ -23,3 +23,9 @@ export interface Project {
     imageAlt: string,
     published: boolean,
 }
+
+export interface SkillGroup {
+    id: string,
+    label: string,
+    skillsList: string[]
+}

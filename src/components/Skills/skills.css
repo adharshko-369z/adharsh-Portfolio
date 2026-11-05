@@ -1,0 +1,38 @@
+.skills-section{
+    padding-block: 4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.skill-list{
+    margin: 0;
+}
+
+.skill-group{
+    display: grid;
+    gap: 0.5rem;
+    padding-block: 1rem;
+}
+
+.skill-group:not(:last-child){
+    border-bottom: 1px solid var(--border-strong);
+}
+
+
+.skill-label{
+    font-family: var(--font-heading);
+    font-weight: var(--weight-semibold);
+}
+
+.skill-items{
+    margin-left: 0;
+    color: var(--text-secondary);
+}
+
+@media (min-width: 768px){
+    .skill-group{
+        grid-template-columns: 10rem 1fr;
+        gap: 2rem;
+        padding-block: 2rem;
+    }
+}
+
