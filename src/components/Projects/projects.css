@@ -1,0 +1,120 @@
+
+.projects-section{
+    padding-block: 4rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.project-list{
+    list-style: none;
+    padding-left: 0;
+    margin-block: 0 ;
+}
+
+.project-item:not(:last-child){
+    border-bottom: 1px solid var(--border-strong);
+}
+
+/* project-card */
+
+.project-card{
+    padding-block: 3rem;
+    display: grid;
+    grid-template-areas:
+    "title" 
+    "image"
+    "desc" 
+    "tags"
+    "links";
+}
+
+/* .project-card:not(:last-child){
+    border-bottom: 1px solid var(--border-strong);
+} */
+
+.project-title {grid-area: title;}
+.project-image {grid-area: image;}
+.project-description {grid-area: desc;}
+.project-tags {grid-area: tags;}
+.project-links {grid-area: links;}
+
+.project-title{
+    padding-bottom: 1rem;
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-bold)
+}
+
+.project-image{
+    width: 100%;
+    aspect-ratio: 2/1;
+    object-fit: cover;
+    object-position: top left;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+}
+
+.project-description{
+    padding-block: 1rem;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-secondary);
+    font-weight: var(--weight-regular);
+    line-height: 1.6;
+    text-wrap: pretty;
+}
+
+.project-tags{
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.project-tag{
+    padding: .25rem .5rem;
+    font-size: var(--text-sm);
+    background-color: var(--surface-raised);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+}
+
+.project-links{
+    display: flex;
+    gap: 1.5rem;
+    padding-top:2rem;
+}
+
+.project-links > a{
+    color: var(--accent);
+    font-size: var(--text-base);
+    font-weight: var(--weight-semibold);
+    text-decoration: none;
+}
+
+@media (min-width: 640px){
+    .project-card{
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+        grid-template-rows: auto auto auto 1fr;
+        grid-template-areas:
+            "title image"
+            "desc  image"
+            "tags  image"
+            "links image";
+        column-gap: 2rem;
+        align-items: start;
+    }
+}
+
+@media (min-width: 1024px){
+
+    .project-card{
+        grid-template-columns: 1fr minmax(0,24rem);
+        column-gap: 4rem;
+    }
+
+    .project-description{
+        padding-block: .5rem ;
+    }
+}

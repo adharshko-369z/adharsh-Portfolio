@@ -11,3 +11,15 @@ export interface Profile {
     intro: string,
     aboutMe: string[]
 }
+
+export interface Project {
+    id: string,
+    title: string,
+    description: string,
+    tags: string[],
+    repoUrl: string,
+    liveUrl: string,
+    imageUrl: string,
+    imageAlt: string,
+    published: boolean,
+}

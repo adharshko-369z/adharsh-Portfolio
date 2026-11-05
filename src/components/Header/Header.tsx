@@ -12,7 +12,7 @@ export default function Header(): JSX.Element{
                 </div>
                 <nav className="nav">
                     <a href="#about">About</a>
-                    <a href="#">Projects</a>
+                    <a href="#projects">Projects</a>
                     <a href="#">Skills</a>
                     <a href="#">Contact</a>
                     <a className="btnLink" href={profile.resumeUrl} download>Resume</a>
