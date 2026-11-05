@@ -1,6 +1,6 @@
 .hero-section{
     border-bottom: 1px solid var(--border);
-    min-height: 75svh;
+    padding-block: 4rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
