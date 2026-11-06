@@ -39,6 +39,7 @@ a:focus-visible{
     border-radius: var(--radius-md);
     text-decoration: none;
     color: var(--text);
+    cursor: pointer;
 }
 
 .container{
