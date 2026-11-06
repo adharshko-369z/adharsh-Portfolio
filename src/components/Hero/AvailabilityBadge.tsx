@@ -36,7 +36,7 @@ export default function AvailabilityBadge(){
     const roleList = profile.roles.map( role => {
         return(
             <li key={role}>
-                <a href={mailtoFor(role)} target="_blank" rel="noopener noreferrer">{role}</a>
+                <a href={mailtoFor(role)}>{role}</a>
             </li>
         )
     } )
