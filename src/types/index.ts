@@ -9,7 +9,8 @@ export interface Profile {
     roles: string[],
     headline: string,
     intro: string,
-    aboutMe: string[]
+    aboutMe: string[],
+    socialLinks: SocialLink[]
 }
 
 export interface Project {
@@ -28,4 +29,9 @@ export interface SkillGroup {
     id: string,
     label: string,
     skillsList: string[]
+}
+
+export interface SocialLink {
+    label: string,
+    url: string
 }
