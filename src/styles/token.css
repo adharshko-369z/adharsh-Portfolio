@@ -41,8 +41,22 @@
     --text-2xl: 2rem;
     --text-3xl: 2.25rem;
 
+    /* role: reading text, scaled at 1024px below */
+    --text-body: var(--text-base);
+
     /* border-radius */
     --radius-sm: 4px;
     --radius-md: 6px;
     --radius-full: 50px;
+
+    /* section-space */
+    --section-space: 2rem;
+}
+
+@media (min-width: 1024px) {
+    :root{
+        --text-body: var(--text-md);
+
+        --section-space:4rem;
+    }
 }

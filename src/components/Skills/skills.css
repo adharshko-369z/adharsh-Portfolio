@@ -1,5 +1,5 @@
 .skills-section{
-    padding-block: 4rem;
+    padding-block: var(--section-space);
     border-bottom: 1px solid var(--border);
 }
 
@@ -21,11 +21,13 @@
 .skill-label{
     font-family: var(--font-heading);
     font-weight: var(--weight-semibold);
+    font-size: var(--text-body);
 }
 
 .skill-items{
     margin-left: 0;
     color: var(--text-secondary);
+    font-size: var(--text-body);
 }
 
 @media (min-width: 768px){

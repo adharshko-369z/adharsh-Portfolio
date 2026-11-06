@@ -1,6 +1,6 @@
 .hero-section{
     border-bottom: 1px solid var(--border);
-    padding-block: 4rem;
+    padding-block: var( --section-space);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,7 +23,7 @@
 }
 
 .hero-intro{
-    font-size: var(--text-base);
+    font-size: var(--text-body);
     color: var(--text-secondary);
     font-weight: var(--weight-regular);
     line-height: 1.5;
@@ -70,7 +70,7 @@
 
     .hero-intro{
         max-width: 50rem;
-        font-size: var(--text-md);
+        font-size: var(--text-body);
     }
 
     .hero-actions{

@@ -1,6 +1,6 @@
 
 .projects-section{
-    padding-block: 4rem;
+    padding-block: var(--section-space);
     border-bottom: 1px solid var(--border);
 }
 
@@ -56,7 +56,7 @@
 .project-description{
     padding-block: 1rem;
     font-family: var(--font-body);
-    font-size: var(--text-base);
+    font-size: var(--text-body);
     color: var(--text-secondary);
     font-weight: var(--weight-regular);
     line-height: 1.6;
@@ -88,7 +88,7 @@
 
 .project-links > a{
     color: var(--accent);
-    font-size: var(--text-base);
+    font-size: var(--text-body);
     font-weight: var(--weight-semibold);
     text-decoration: none;
 }
@@ -112,6 +112,10 @@
     .project-card{
         grid-template-columns: 1fr minmax(0,24rem);
         column-gap: 4rem;
+    }
+
+    .project-title{
+        font-size: var(--text-xl);
     }
 
     .project-description{

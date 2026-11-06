@@ -1,5 +1,5 @@
 .about-section{
-    padding-block: 4rem;
+    padding-block:var(--section-space);
     display: flex;
     align-items: center;
     border-bottom: 1px solid var(--border);
@@ -14,7 +14,7 @@
 .about-paragraph{
     font-family: var(--font-body);
     font-weight: var(--weight-regular);
-    font-size: var(--text-base);
+    font-size: var(--text-body);
     color: var(--text-secondary);
     line-height: 1.6;
 }
@@ -22,10 +22,8 @@
 
 
 @media (min-width: 1024px){
-
     .about-paragraph{
         max-width: 70ch;
-        font-size: var(--text-md);
         line-height: 1.6;
     }
 }
