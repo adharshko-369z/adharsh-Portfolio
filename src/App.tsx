@@ -10,11 +10,13 @@ export default function App(){
   return (
     <>
       <Header />
-      <Hero />
-      <About />
-      <Projects />
-      <Skills />
-      <Contact />
+      <main>
+        <Hero />
+        <About />
+        <Projects />
+        <Skills />
+        <Contact />
+      </main>
       <Footer />
     </>
   )
