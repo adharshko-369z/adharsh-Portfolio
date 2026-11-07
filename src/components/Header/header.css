@@ -63,6 +63,10 @@
     
 }
 
+.nav a[aria-current="location"]{
+    color: var(--text);
+}
+
 @media (min-width: 530px){
     .header-row{
         flex-direction: row;

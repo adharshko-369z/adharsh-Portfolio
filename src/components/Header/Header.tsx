@@ -1,8 +1,18 @@
-import type { JSX } from "react/jsx-runtime"
 import { profile } from "../../data/profile"
+import { useActiveSection } from "../../hooks/useActiveSection"
 
+const navLinks = [
+  { id: "about", label: "About" },
+  { id: "projects", label: "Projects" },
+  { id: "skills", label: "Skills" },
+  { id: "contact", label: "Contact" },
+]
 
-export default function Header(): JSX.Element{
+const sectionIds = navLinks.map((link) => link.id)
+
+export default function Header(){
+
+    const activeId = useActiveSection(sectionIds)
 
     return(
         <header className="header">
@@ -11,13 +21,20 @@ export default function Header(): JSX.Element{
                     <span>{`< ${profile.name} >`}</span>
                 </div>
                 <nav className="nav">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                    <a className="btnLink" href={profile.resumeUrl} download>Resume</a>
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.id}
+                            href={`#${link.id}`}
+                            aria-current={activeId === link.id ? "location" : undefined}
+                        >
+                            {link.label}
+                        </a>
+                    ))}
+                        <a className="btnLink" href={profile.resumeUrl} download>Resume</a>
                 </nav>  
             </div>
         </header>    
     )
 }
+
+ 
