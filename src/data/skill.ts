@@ -19,12 +19,12 @@ export const skills: SkillGroup[] =[
     {
         id: "tooling",
         label: "Tooling",
-        skillsList: ["Git and GitHub, Vite, ESLint, npm, Netlify, Figma(basics)"]
+        skillsList: ["Git and GitHub", "Vite", "ESLint", "npm", "Netlify", "Figma (basics)"]
     },
     {
         id: "practices",
         label: "Practices",
-        skillsList: ["Accessibility (ARIA, focus management)", "responsive layout", "form validation"]
+        skillsList: ["Accessibility (ARIA, focus management)", "Responsive layout", "Form validation"]
     }
     
 
