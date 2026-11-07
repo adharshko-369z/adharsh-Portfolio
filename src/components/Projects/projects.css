@@ -27,10 +27,6 @@
     "links";
 }
 
-/* .project-card:not(:last-child){
-    border-bottom: 1px solid var(--border-strong);
-} */
-
 .project-title {grid-area: title;}
 .project-image {grid-area: image;}
 .project-description {grid-area: desc;}
